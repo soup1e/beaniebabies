@@ -7,12 +7,13 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 // export async functions that fetch data
 
 export async function getBeanies() {
-    let query = client
-        .from('beanie_babies')
-        .select('*', { count: 'exact' })
-        .order('releaseDate')
-        .limit(100);
+    let query = client.from('beanie_babies').select('*', { count: 'exact' }).order('id').limit(100);
 
     const response = await query;
+    return response;
+}
+
+export async function getAstroSigns() {
+    const response = await client.from('beanie_baby_astro_signs').select();
     return response;
 }

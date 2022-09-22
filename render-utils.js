@@ -15,3 +15,10 @@ export function renderBeanie(beanie) {
     li.append(img, h3, span);
     return li;
 }
+
+export function renderAstroSignOption(astroSign) {
+    const option = document.createElement('option');
+    option.value = astroSign.name;
+    option.textContent = astroSign.name;
+    return option;
+}
