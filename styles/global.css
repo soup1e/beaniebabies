@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
@@ -32,4 +34,74 @@ header .logo {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#notification-display {
+    font-family: 'Open Sans', sans-serif;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    width: 450px;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+select {
+    width: 450px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    width: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.card {
+    background: white;
+    border: 1px solid lightgrey;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+    padding: 10px;
+    text-align: center;
+
+    display: grid;
+    align-content: space-between;
+    justify-items: center;
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 225px;
+    gap: 10px;
+}
+.card img {
+    width: 70px;
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.card span {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
 }
